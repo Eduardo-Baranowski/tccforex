@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'tccForex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'proto780_dbTCCForex',
-        'USER': 'proto780_eduardo',
-        'PASSWORD': '12345678',
-        'HOST': 'prototecnologia.com.br',
+        'NAME': 'dbTCC1',
+        'USER': 'root',
+        'PASSWORD': 'Baranowski25',
+        'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional',
