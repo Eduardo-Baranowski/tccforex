@@ -1,0 +1,8 @@
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598634667856	Marionette	INFO	Listening on port 37091
+1598634667924	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.c524503b3888dab273d7.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.c524503b3888dab273d7.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.c524503b3888dab273d7.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/, line 1428: unreachable code after return statement
+1598635972179	Marionette	INFO	Stopped listening on port 37091

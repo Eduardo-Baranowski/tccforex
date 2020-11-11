@@ -1,4 +1,6 @@
+{% load static %}
 <!doctype html>
+<link rel="shortcut icon" href="{% static '/touro.png' %}" />
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -70,7 +72,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 5 períodos</p>
-                {{ smaCinco }}
+                {% if smaCinco == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaCinco == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -102,7 +108,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 10 períodos</p>
-                {{ smaDez }}
+                {% if smaDez == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaDez == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -133,7 +143,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 20 períodos</p>
-                {{ smaVinte }}
+                {% if smaVinte == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaVinte == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -164,7 +178,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 50 períodos</p>
-                {{ smaCinquenta }}
+                {% if smaCinquenta == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaCinquenta == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -195,7 +213,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 100 períodos</p>
-                {{ smaCem }}
+                {% if smaCem == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaCem == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -226,7 +248,11 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 200 períodos</p>
-                {{ smaDuzentos }}
+                {% if smaDuzentos == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
                 {% if smaDuzentos == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -264,14 +290,19 @@
 
     <div class="album py-5 bg-light">
    <div class="container">
-      <h1 align="center">5 Minutos</h1>
+      <h1 align="center">15 Minutos</h1>
         <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 5 períodos</p>
-                {{ smaCinco }}
-                {% if smaCinco == "Venda" %}
+                {% if smaCinco15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+
+                {% if smaCinco15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -302,8 +333,12 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 10 períodos</p>
-                {{ smaDez }}
-                {% if smaDez == "Venda" %}
+                {% if smaDez15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDez15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -333,8 +368,12 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 20 períodos</p>
-                {{ smaVinte }}
-                {% if smaVinte == "Venda" %}
+                {% if smaVinte15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaVinte15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -364,8 +403,12 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 50 períodos</p>
-                {{ smaCinquenta }}
-                {% if smaCinquenta == "Venda" %}
+                {% if smaCinquenta15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCinquenta15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -395,8 +438,12 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 100 períodos</p>
-                {{ smaCem }}
-                {% if smaCem == "Venda" %}
+                {% if smaCem15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCem15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -426,8 +473,12 @@
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <p class="card-text">Média Móvel de 200 períodos</p>
-                {{ smaDuzentos }}
-                {% if smaDuzentos == "Venda" %}
+                {% if smaDuzentos15 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDuzentos15 == "Venda" %}
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -461,6 +512,685 @@
 
     <!-- Encerra segunda seção -->
 
+    <!-- Terceira seção -->
+
+    <div class="album py-5 bg-light">
+   <div class="container">
+      <h1 align="center">30 Minutos</h1>
+        <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 5 períodos</p>
+                {% if smaCinco30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+
+                {% if smaCinco30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 10 períodos</p>
+                {% if smaDez30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDez30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 20 períodos</p>
+                {% if smaVinte30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaVinte30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+           <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 50 períodos</p>
+                {% if smaCinquenta30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCinquenta30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 100 períodos</p>
+                {% if smaCem30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCem30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 200 períodos</p>
+                {% if smaDuzentos30 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDuzentos30 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+
+
+    <!-- Encerra Terceira seção -->
+
+
+      <!-- Quarta seção -->
+
+    <div class="album py-5 bg-light">
+   <div class="container">
+      <h1 align="center">1 Hora</h1>
+        <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 5 períodos</p>
+                {% if smaCincoH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+
+                {% if smaCincoH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 10 períodos</p>
+                {% if smaDezH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDezH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 20 períodos</p>
+                {% if smaVinteH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaVinteH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+           <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 50 períodos</p>
+                {% if smaCinquentaH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCinquentaH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 100 períodos</p>
+                {% if smaCemH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCemH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 200 períodos</p>
+                {% if smaDuzentosH1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDuzentosH1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+
+
+    <!-- Encerra Quarta seção -->
+
+
+        <!-- Quinta seção -->
+
+    <div class="album py-5 bg-light">
+   <div class="container">
+      <h1 align="center">1 Dia</h1>
+        <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 5 períodos</p>
+                {% if smaCincoD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+
+                {% if smaCincoD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 10 períodos</p>
+                {% if smaDezD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDezD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 20 períodos</p>
+                {% if smaVinteD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaVinteD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+           <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 50 períodos</p>
+                {% if smaCinquentaD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCinquentaD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 100 períodos</p>
+                {% if smaCemD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaCemD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+                   <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">Média Móvel de 200 períodos</p>
+                {% if smaDuzentosD1 == "Venda" %}
+                {{ "Baixa" }}
+                    {% else %}
+                    {{ "Alta" }}
+                {% endif %}
+                {% if smaDuzentosD1 == "Venda" %}
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="red" class="bi bi-arrow-down-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <svg color="green" class="bi bi-arrow-up-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                      <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    </div>
+                  </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+
+
+    <!-- Encerra Quinta seção -->
 
 
 
