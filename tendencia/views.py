@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import MySQLdb
 def cinco_periodos():
-    con = MySQLdb.connect(host="localhost", user="root", passwd="Baranowski25", db="dbTCCII")
+    con = MySQLdb.connect(host="localhost", user="root", passwd="********", db="dbTCCII")
     cursor = con.cursor()
     cursor.execute("SELECT * FROM dbTCCII.precos")
     numrows = int(cursor.rowcount)
