@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import MySQLdb
 def cinco_periodos():
-    con = MySQLdb.connect(host="localhost", user="root", passwd="********", db="dbTCCII")
+    con = MySQLdb.connect(host="localhost", user="root", passwd="Baranowski25", db="dbTCCII")
     cursor = con.cursor()
     cursor.execute("SELECT * FROM dbTCCII.precos")
     numrows = int(cursor.rowcount)
@@ -95,10 +95,8 @@ def cinquenta_periodos():
     bid = 0
     for row in cursor.fetchall():
         bid = row[1]
-        print(bid)
-    ultimo = row[1]
+
     media = (sum(lista[0:50]))/50
-    print(media)
 
     if float(bid) < media:
         return 'Venda'
@@ -563,10 +561,9 @@ def cinquenta_periodosH1():
     bid = 0
     for row in cursor.fetchall():
         bid = row[1]
-        print(bid)
-    print('lista', lista[0:50])
+
     media = (sum(lista[0:50]))/50
-    print(media)
+
     if float(bid) < media:
         return 'Venda'
     elif float(bid) > media:
